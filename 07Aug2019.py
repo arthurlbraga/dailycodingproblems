@@ -7,7 +7,7 @@ def addUp(arr, k):
 
     for x in arr:
         if(x < k):
-            if (k-x) in arr:
+            if (k-x) in arr[1:]:
                 return [x, (k-x)]
 
     return sumarr
