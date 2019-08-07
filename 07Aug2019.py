@@ -3,14 +3,12 @@
 # Bonus: Can you do this in one pass?
 
 def addUp(arr, k):
-    sumarr = []
-
     for x in arr:
         if(x < k):
             if (k-x) in arr[1:]:
                 return [x, (k-x)]
 
-    return sumarr
+    return []
 
 arr = [10, 15, 3, 7]
 k = 17
