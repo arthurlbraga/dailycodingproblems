@@ -6,13 +6,20 @@
 arr = [34, -50, 42, 14, -5, 86]
 result = []
 result_sum = 0
+current_sum = 0
+current_arr = []
 
 for i in arr:
-    result_sum = result_sum + i
-    if(result_sum >= 0):
-        result.append(i)
-    else:
-        result = []
+    current_sum = current_sum + i
+    if(current_sum < 0):
+        current_arr = []
+        current_sum = 0
         result_sum = 0
+        result = []
+    else:
+        current_arr.append(i)
+        if(current_sum > result_sum):
+            result = current_arr[:]
+            result_sum = current_sum
 
-print(result_sum)
+print(result)
